@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>QR code component</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | QR code component</title>
+
     <link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
   </head>
+
   <body>
-    <div class="container">
-      <img src="./images/image-qr-code.png" alt="qr code image" />
-      <h1>Improve your front-end skills by building projects</h1>
-      <p>
-        Scan the QR code to visit Frontend Mentor and take your coding skill to
-        the next level
-      </p>
-    </div>
+    <main class="card">
+      <div class="qrcode">
+        <img class="qrcode__image" src="./images/image-qr-code.png" alt="QE code to frontendmentor.io" />
+      </div>
+      <h1 class="card__title">Improve your front-end skills by building projects</h1>
+      <p class="card__desc">Scan the QR code to visit Frontend Mentor and take your coding skill to the next level</p>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="nopener">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/leonasdev" target="_blank" rel="noopner">leonasdev</a>.
+    </footer>
   </body>
 </html>

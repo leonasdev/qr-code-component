@@ -1,36 +1,93 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.5s;
+}
+
 body {
-  background-color: rgb(213, 225, 239);
-  font-family: Outfit, sans-serif;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  font-family: "Outfit", sans-serif;
   display: flex;
-  height: 100vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
 
-.container {
+.card {
   background-color: white;
-  width: 32vh;
-  padding: 16px;
-  border-radius: 16px;
+  max-width: 21.4rem;
+  padding: 1rem;
+  border-radius: 1.4rem;
   box-shadow: 0px 4px 70px 6px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  padding: 0.95rem 1.1rem;
+  transition: ease-in-out 0.5s;
 }
 
-.container > img {
-  border-radius: 10px;
-  width: 100%;
+.qrcode {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: rgb(44, 125, 250);
 }
 
-.container > h1 {
-  margin: 14px;
+.qrcode__image {
+  max-width: 100%;
+  transition: ease-in-out 0.5s;
+}
+
+/* use media (hover:hover) instead of just :hover, so mobile device will not be effected */
+@media (hover: hover) {
+  .qrcode__image:hover {
+    transform: rotate(90deg) scale(150%);
+    transition: ease-in-out 0.5s;
+  }
+
+  .card:hover {
+    box-shadow: 0px 4px 70px 6px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.5s;
+  }
+}
+
+.card__title {
+  margin: 1rem;
   text-align: center;
-  font-size: 2.4vh;
-  color: rgb(33, 53, 83);
+  font-size: 1.4rem;
+  color: var(--dark-blue);
 }
 
-.container > p {
-  margin: 20px;
+.card__desc {
+  margin: 1rem;
   text-align: center;
-  font-size: 1.7vh;
-  color: rgb(162, 166, 173);
+  font-size: 1rem;
+  color: var(--grayish-blue);
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+@media screen and (min-height: 576px) {
+  .attribution {
+    position: fixed;
+    bottom: 0.5rem;
+  }
+}
+
+.attribution a {
+  color: inherit;
+}
+
+.attribution a:hover {
+  color: black;
 }
