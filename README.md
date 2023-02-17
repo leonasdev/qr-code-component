@@ -1,5 +1,25 @@
-# Frontend Mentor - QR code component solution
-![image](https://user-images.githubusercontent.com/39915562/218642818-1b3a383b-ee0b-475b-ae41-21a5bdc4482a.png)
+<div id="top"></div>
+
+<div align="center">
+
+  <img src="https://www.frontendmentor.io/static/images/logo-mobile.svg" alt="frontendmentor" width="80">
+
+  <h2 align="center">QR code component solution</h2>
+  <p align="center">
+    <a href="https://www.frontendmentor.io/solutions/pure-html-with-css-3_GNolrlOC"><strong>Frontend Mentor Challenge</strong></a>
+    <br />
+    <br />
+    <a href="https://qr-code-component-seven-nu.vercel.app/">View Demo</a>
+    ·
+    <a href="https://www.frontendmentor.io/solutions/pure-html-with-css-3_GNolrlOC" target="_blank">Solution</a>
+  </p>
+</div>
+
+#
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/39915562/219544802-5eed17a5-936f-43df-a958-9ad8684fbc82.png">
+</div>
 
 This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
