@@ -23,8 +23,7 @@ body {
 }
 
 .card {
-  background-color: white;
-  max-width: 20rem;
+  background-color: var(--white);
   padding: 1rem;
   border-radius: 1.4rem;
   box-shadow: 0px 4px 70px 6px rgba(0, 0, 0, 0.2);
@@ -40,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20rem;
+  height: 26rem;
   position: relative;
 }
 
@@ -67,8 +66,8 @@ body {
 }
 
 .qrcode__image {
-  max-width: 12rem;
-  max-height: 12rem;
+  max-width: 16rem;
+  max-height: 16rem;
   transition: ease-in-out 0.5s;
   z-index: 1;
 }
