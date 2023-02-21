@@ -3,19 +3,21 @@
   --light-gray: hsl(212, 45%, 89%);
   --grayish-blue: hsl(220, 15%, 55%);
   --dark-blue: hsl(218, 44%, 22%);
+  --blue: hsl(216deg 95% 58%);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.2s;
+  text-decoration: none;
 }
 
 body {
   min-height: 100vh;
   background-color: var(--light-gray);
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit", "Noto Sans TC", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +94,10 @@ body {
   color: var(--dark-blue);
 }
 
+.card__title:hover {
+  color: var(--blue);
+}
+
 .card__desc {
   margin: 1rem;
   text-align: center;
@@ -100,12 +106,13 @@ body {
 }
 
 .attribution {
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-align: center;
+  font-weight: 700;
   color: var(--dark-blue);
 }
 
-@media screen and (min-height: 576px) {
+@media screen and (min-height: 700px) {
   .attribution {
     position: fixed;
     bottom: 0.5rem;
@@ -114,8 +121,9 @@ body {
 
 .attribution a {
   color: inherit;
+  transition: ease-in-out 0.2s;
 }
 
 .attribution a:hover {
-  color: black;
+  color: var(--blue);
 }
