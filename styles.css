@@ -1,15 +1,30 @@
-:root {
+:root,
+:root[data-theme="light"] {
   --white: hsl(0, 0%, 100%);
   --light-gray: hsl(212, 45%, 89%);
   --grayish-blue: hsl(220, 15%, 55%);
   --dark-blue: hsl(218, 44%, 22%);
+  --qr-bg: rgb(44, 125, 250);
+  --black: rgb(0 0 0);
+  --black-shadow: rgba(0, 0, 0, 0.2);
+  --black-shadow-hover: rgba(0, 0, 0, 0.5);
+}
+
+:root[data-theme="dark"] {
+  --white: rgb(24 26 27);
+  --light-gray: rgb(40 43 45);
+  --grayish-blue: rgb(205 200 194);
+  --dark-blue: rgb(170 196 222);
+  --qr-bg: rgb(4 72 176);
+  --black: rgb(255 255 255);
+  --black-shadow: rgba(255, 255, 255, 0.1);
+  --black-shadow-hover: rgba(255, 255, 255, 0.2);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all ease-in-out 0.5s;
 }
 
 body {
@@ -20,14 +35,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background-color ease-in-out 0.5s;
 }
 
 .card {
-  background-color: white;
+  background-color: var(--white);
   max-width: 20rem;
   padding: 1rem;
   border-radius: 1.4rem;
-  box-shadow: 0px 4px 70px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 70px 6px var(--black-shadow);
   margin: 1rem;
   padding: 0.95rem 1.1rem;
   transition: ease-in-out 0.5s;
@@ -36,12 +52,13 @@ body {
 .qrcode {
   overflow: hidden;
   border-radius: 1rem;
-  background-color: rgb(44, 125, 250);
+  background-color: var(--qr-bg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 20rem;
   position: relative;
+  transition: background-color ease-in-out 0.5s;
 }
 
 .qrcode::before {
@@ -81,8 +98,16 @@ body {
   }
 
   .card:hover {
-    box-shadow: 0px 4px 70px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 70px 6px var(--black-shadow-hover);
     transition: ease-in-out 0.5s;
+  }
+
+  .theme-label:hover {
+    background-color: var(--grayish-blue);
+  }
+
+  .attribution a:hover {
+    color: var(--black);
   }
 }
 
@@ -100,6 +125,28 @@ body {
   color: var(--grayish-blue);
 }
 
+#toggle-theme {
+  display: none;
+}
+
+.theme-label {
+  font-size: 1.6rem;
+  border: 2px solid var(--grayish-blue);
+  border-radius: 1rem;
+  box-shadow: 0px 4px 70px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color, 0.2s;
+}
+
+.theme-label::after {
+  content: "☀️";
+  cursor: pointer;
+}
+
+#toggle-theme:checked + .theme-label::after {
+  content: "🌙";
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 0.75rem;
   text-align: center;
@@ -115,8 +162,5 @@ body {
 
 .attribution a {
   color: inherit;
-}
-
-.attribution a:hover {
-  color: black;
+  transition: color 0.2s;
 }

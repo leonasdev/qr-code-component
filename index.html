@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,6 +12,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
+
+    <script src="index.js" defer></script>
   </head>
 
   <body>
@@ -22,6 +24,10 @@
       <h1 class="card__title">Hello! I'm Leon</h1>
       <p class="card__desc">Scan the QR code to visit my Github, and welcome to make friends with me!</p>
     </main>
+    <div class="theme">
+      <input type="checkbox" id="toggle-theme" />
+      <label for="toggle-theme" class="theme-label"></label>
+    </div>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="nopener">Frontend Mentor</a>. Coded by
